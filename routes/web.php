@@ -11,6 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+//Route::get('/', function () {
+//    return view('Admin.homecontent');
+//});
+Route::get('/dashboard', function () {
+    return view('User.user_homecontent');
 });
+
+Route::get('admin-login','AdminController@login');
+
+Auth::routes();
+
+Route::get('/admin', 'HomeController@index');
