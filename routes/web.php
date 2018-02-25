@@ -18,7 +18,7 @@ Route::get('/dashboard', function () {
     return view('User.user_homecontent');
 });
 
-Route::get('admin-login','AdminController@login');
+Route::get('/admin-login','AdminController@login');
 
 Auth::routes();
 
