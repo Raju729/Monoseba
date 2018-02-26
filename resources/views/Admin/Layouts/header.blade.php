@@ -213,11 +213,11 @@
                     </ul>
                 </li>
                 <!-- User Account: style can be found in dropdown.less -->
-
+               
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" >
                         {{--<img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">--}}
-                        <span class="hidden-xs">Admin-{{ Auth::user()->name }}</span>
+                        <span class="hidden-xs">{{ Auth::user()->name }}</span>
                     </a>
                     <ul class="dropdown-menu">
 
@@ -243,6 +243,9 @@
                                 <a class="btn btn-default btn-flat" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();"> Sign out</a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    {{ csrf_field() }}
+                                </form>
                             </div>
                         </li>
                     </ul>
