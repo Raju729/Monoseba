@@ -70,9 +70,8 @@
                 </a>
                 <ul class="treeview-menu">
                     <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> Publish News</a></li>
-                    <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Add Blogs</a></li>
-                    <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> Count News</a></li>
-                    <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> Manage Blogs</a></li>
+                    <li><a href="{{url('admin/posts/create')}}"><i class="fa fa-circle-o"></i> Add Blogs</a></li>
+                    <li><a href="{{url('admin/posts')}}"><i class="fa fa-circle-o"></i> Manage Blogs</a></li>
                 </ul>
             </li>
 

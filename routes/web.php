@@ -14,12 +14,18 @@
 //Route::get('/', function () {
 //    return view('Admin.homecontent');
 //});
-Route::get('/dashboard', function () {
-    return view('User.user_homecontent');
-});
 
-Route::get('/admin-login','AdminController@login');
+
+Route::prefix('user')->group(function () {
+    Route::get('/home','UserController@home');
+    Route::get('/blog','UserController@showBlog');
+});
 
 Auth::routes();
 
-Route::get('/admin', 'HomeController@index');
+Route::prefix('admin')->group(function () {
+    Route::get('/login','AdminController@login');
+    Route::get('/dashbord','AdminController@index');
+    Route::resource('/posts', 'PostsController');
+
+});

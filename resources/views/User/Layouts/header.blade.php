@@ -27,8 +27,8 @@
                                 <li><a class="menu active" href="#home" >Home</a></li>
                                 <li><a class="menu" href="#team">Our Doctors</a></li>
                                 <li><a class="menu" href="#service">our services </a></li>
-                                <li><a class="menu" href="#contact"> contact us</a></li>
-                                <li><a class="menu" href="#contact">Register</a></li>
+                                <li><a class="menu" href="{{url('user/blog')}}"> News & Blogs</a></li>
+                                <li><a class="menu" href="#contact"><h6>Register</h6></a></li>
                             </ul>
                         </div><!-- /navbar-collapse -->
                     </div><!-- / .container-fluid -->
